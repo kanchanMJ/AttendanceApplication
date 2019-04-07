@@ -16,7 +16,7 @@ public class TestBase {
 	public TestBase() {
 		FileInputStream fis;
 		try {
-			fis = new FileInputStream("C:\\Users\\10656254\\eclipse-workspace\\Attendance\\src\\Utilities\\config.properties");
+			fis = new FileInputStream("C:\\Users\\HP\\git\\AttendanceApplication\\Attendance\\src\\Utilities\\config.properties");
 			prop = new Properties();
 			prop.load(fis);
 		} catch (IOException e) {
@@ -26,13 +26,13 @@ public class TestBase {
 	}
 
 	public void initializeBrowser() {
-		System.setProperty("webdriver.chrome.driver", "D:\\New folder\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "F:\\Software\\Selenium11-BrowserDrivers\\BrowserDrivers\\chromedriver_win32_v2_36\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		String appUrl = prop.getProperty("url");
 		driver.get(appUrl);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageloadtimeout(60,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60,TimeUnit.SECONDS);
 	}
 
 	public void closeBrowser() {
