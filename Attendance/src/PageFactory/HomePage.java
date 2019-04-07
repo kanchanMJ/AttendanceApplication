@@ -22,7 +22,7 @@ public class HomePage extends TestBase {
 		normalize.click();
 		normalize_Btton.click();
 		driver.switchTo().alert();
-		
+		System.out.println("Testing pull request");
 		
 	}
 	
