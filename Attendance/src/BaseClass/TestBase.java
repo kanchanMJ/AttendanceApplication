@@ -31,7 +31,7 @@ public class TestBase {
 		driver.manage().window().maximize();
 		String appUrl = prop.getProperty("url");
 		driver.get(appUrl);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 
 	public void closeBrowser() {
